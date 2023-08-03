@@ -1,18 +1,16 @@
 import './App.css'
 import Nav from "./components/Nav"
 import Hero from "./components/Hero"
+import Footer from './components/Footer'
 
 function App() {
   return (
     <>
-      <header>
-        <Nav />
-      </header>
+      <Nav />
       <main>
         <Hero />
       </main>
-      <footer>
-      </footer>
+      <Footer />
     </>
   )
 }

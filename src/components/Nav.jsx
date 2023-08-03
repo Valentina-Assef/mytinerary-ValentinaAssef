@@ -8,10 +8,10 @@ const Nav = () => {
   ]
   let [open,setOpen]=useState(false);
   return (
-    <div className='nav h-20 shadow-md w-full fixed top-0 left-0 bg-white opacity-70'>
+    <div className='nav h-20 shadow-md w-full fixed top-0 left-0 bg-white opacity-80'>
         <div className='md:flex items-center justify-between py-0 md:px-10 px-7'>
           <div className='flex items-center'>
-            <img className='logo h-auto p-0 cursor-pointer' src={logo} alt='Logo MyTinerary'/>
+            <img className='logo h-20 w-50 p-0 cursor-pointer' src={logo} alt='Logo MyTinerary'/>
           </div>
           <div onClick={() => setOpen(!open)} className='text-3xl absolute right-8 top-6 cursor-pointer md:hidden'>
             <ion-icon name={open ? "close" : "menu"}></ion-icon>

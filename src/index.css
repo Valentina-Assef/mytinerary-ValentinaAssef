@@ -7,6 +7,6 @@
 } */
 
 .main {
-    background: url("../public/background.png") no-repeat center fixed;
+    background: url("../public/background_home.png") no-repeat center fixed;
     background-size: cover;
 }
