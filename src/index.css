@@ -36,7 +36,14 @@
     }
 }
 
-.polaroidContenedor {
+.textoCarousel {
+    display: block;
+    text-align: center;
+    font-style: italic;
+    font-family: 'Caveat Brush', cursive;
+}
+
+.polaroid {
     display: flex;
     flex-direction: column;
     max-width: 100%;
@@ -65,12 +72,4 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-
-.textoPolaroid {
-    display: block;
-    text-align: center;
-    font-style: italic;
-    font-family: 'Caveat Brush', cursive;
 }
-

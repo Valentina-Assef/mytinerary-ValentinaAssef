@@ -4,7 +4,7 @@ import logo from "../../public/logo-mytinerary.png"
 const Nav = () => {
   let Links =[
     {name:"Home",link:"/"},
-    {name:"Cities",link:""},
+    {name:"Cities",link:"../pages/Cities.jsx"},
   ]
   let [open,setOpen]=useState(false);
   return (
@@ -20,11 +20,11 @@ const Nav = () => {
             {
               Links.map((Link) => (
                 <li key={Link.name} className='md:ml-8 text-xl md:my-0 my-7'>
-                  <a href={Link.link} className='text-gray-800 hover:text-gray-400 font-bold duration-500'>{Link.name}</a>
+                  <a href={Link.link} className='text-gray-800 font-bold hover:text-amber-500 duration-500'>{Link.name}</a>
                 </li>
               ))
             }
-            <button type="button" className="border-black md:ml-8 md:my-0 my-7 relative flex rounded-full focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+            <button type="button" className="border-black hover:text-amber-500 md:ml-8 md:my-0 my-7 relative flex rounded-full focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-amber-500" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
               <ion-icon name="person-circle-outline" style={{ fontSize: "2.5rem" }}></ion-icon>
             </button>
           </ul>
