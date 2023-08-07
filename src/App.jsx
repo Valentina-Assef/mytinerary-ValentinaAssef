@@ -1,15 +1,13 @@
 import './App.css'
 import Nav from "./components/Nav"
-import Hero from "./components/Hero"
+import Home from './pages/Home'
 import Footer from './components/Footer'
 
 function App() {
   return (
     <>
       <Nav />
-      <main className='flex'>
-        <Hero />
-      </main>
+      <Home />
       <Footer />
     </>
   )
