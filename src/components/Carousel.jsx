@@ -55,14 +55,20 @@ export default function Carousel() {
 
   let sliders = []
   for (let i = 0; i < carouselData.length; i += 4){
-    sliders.push(carouselData.slice(i, i + 4))
+    const slide = carouselData.slice(i, i + 4);
+    slide[0].optionalClass = "RotarDer"
+    slide[slide.length - 1].optionalClass = "RotarIzq"
+    sliders.push(slide);
   }
 
   let [index, setIndex] = useState(0)
 
+  let [activeSlide, setActiveSlide] = useState(0)
+
   useEffect(() => {
     let interval = setInterval(() => {
       setIndex((index) => (index + 1) % sliders.length)
+      setActiveSlide((activeSlide) => (activeSlide + 1) % sliders.length);
     }, 5000)
     return () => clearInterval(interval)
   })
@@ -73,10 +79,17 @@ export default function Carousel() {
     } else {
       setIndex(index - 1);
     }
+    setActiveSlide(index === 0 ? sliders.length - 1 : index - 1);
   };
   
   let handleNext = () => {
     setIndex((index + 1) % sliders.length);
+    setActiveSlide((activeSlide + 1) % sliders.length);
+  };
+
+  let handleIndicatorClick = (indicatorIndex) => {
+    setIndex(indicatorIndex);
+    setActiveSlide(indicatorIndex);
   };
 
   return (
@@ -89,12 +102,27 @@ export default function Carousel() {
           </div>
           <div>
             <div className="my-5 mx-1 py-5 px-2 grid sm:grid-cols-2 gap-4 bg-white rounded-lg">
-              {sliders[index].map((each, key) => (<Cards key={key} url={each.url} text={each.text} />))}
+              {sliders[index].map((each, key) => (
+              <Cards 
+                key={key} 
+                url={each.url} 
+                text={each.text}
+                optionalClass={each.optionalClass} />
+              ))}
             </div>
           </div>
           <div className="flex-none">
             <ion-icon name="caret-forward-outline" onClick={handleNext} style={{ fontSize: "2rem", color: "white" }}></ion-icon>
           </div>
+        </div>
+        <div className="flex items-center justify-center mt-4 space-x-2">
+          {sliders.map((_, i) => (
+            <div
+              key={i}
+              className={`w-3 h-3 rounded-full ${activeSlide === i ? "bg-white" : "bg-gray-300"}`}
+              onClick={() => handleIndicatorClick(i)}>
+            </div>
+          ))}
         </div>
       </div>
     </div>
