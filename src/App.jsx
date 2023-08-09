@@ -1,14 +1,10 @@
 import './App.css'
-import Main from './layouts/Main'
-import Home from './pages/Home'
-import Cities from './pages/Cities'
+import { RouterProvider } from 'react-router-dom'
+import router from './router/router'
 
 function App() {
   return (
-      <Main>
-        <Home />
-        <Cities />
-      </Main>
+    <RouterProvider router={router} />
   )
 }
 

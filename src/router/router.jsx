@@ -13,9 +13,9 @@ const router = createBrowserRouter([
                 element: <Home />
             },
             {
-                path: "../pages/Cities.jsx",
+                path: "/cities",
                 element: <Cities />
-            },
+            }
         ]
     },
 ]);

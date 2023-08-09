@@ -4,7 +4,7 @@ import logo from "../../public/logo-mytinerary.png"
 const Nav = () => {
   let Links =[
     {name:"Home",link:"/"},
-    {name:"Cities",link:"../pages/Cities.jsx"},
+    {name:"Cities",link:"Cities"}
   ]
   let [open,setOpen]=useState(false);
   return (

@@ -60,7 +60,7 @@ export default function Carousel() {
           <div className="flex-none">
             <ion-icon name="caret-back-outline" style={{ fontSize: "2rem", color: "white" }}></ion-icon>
           </div>
-           <div>
+          <div>
             <div className="my-5 mx-1 py-5 px-2 grid sm:grid-cols-2 gap-4 bg-white rounded-lg">
               {carouselData.map((each, key) => <Cards key={key} url={each.url} text={each.text} rotate={each.rotate} />)}
             </div>

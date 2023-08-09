@@ -72,3 +72,24 @@
     height: 100px;
     object-fit: cover;
 }
+
+ /*.slider-box {
+    overflow: hidden;
+}
+
+.ul {
+
+    width: 100%;
+    animation: slide 10s infinite ease-in-out;
+}
+
+@keyframes slide {
+    0% { margin-left: 0; }
+    20% { margin-left: 0; }
+    25% { margin-left: -33%; }
+    45% { margin-left: -33%; }
+    50% { margin-left: -66%; }
+    70% { margin-left: -66%; }
+    75% { margin-left: -100%; }
+    100% { margin-left: -100%; }
+}*/
