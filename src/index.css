@@ -31,7 +31,7 @@
       z-index: 1;
       top: 50%;
       left: 50%;
-      transition: .5s ease-in-out all;
+      transition: .4s ease-in-out all;
       border-radius: 100px;
     }
 
@@ -42,8 +42,8 @@
 }
 
 .textoCarousel {
-    display: block;
     text-align: center;
+    justify-content: center;
     font-style: italic;
     font-family: 'Caveat Brush', cursive;
 }

@@ -1,12 +1,14 @@
 import { useState } from 'react'
 import logo from "../../public/logo-mytinerary.png"
+import LinkNav from './LinkNav'
+import { Link as LinkRouter } from 'react-router-dom'
 
 const Nav = () => {
-  let Links =[
-    {name:"Home",link:"/"},
-    {name:"Cities",link:"Cities"}
+  let links =[
+    {title: "Home", to: "/"},
+    {title: "Cities", to: "Cities"}
   ]
-  let [open,setOpen]=useState(false);
+  let [open,setOpen] = useState(false);
   return (
     <div className='nav h-20 w-full top-0 left-0 bg-white drop-shadow-lg'>
         <div className='md:flex items-center justify-between py-0 md:px-10 px-7'>
@@ -18,11 +20,7 @@ const Nav = () => {
           </div>
           <ul className={`md:flex md:items-center md:pb-0 pb-3 pr-5 absolute md:static bg-white md:z-auto z-2 left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? "top-20 opacity-100" : "top-[-490px] md:opacity-100 opacity-0"}`}>
             {
-              Links.map((Link) => (
-                <li key={Link.name} className='md:ml-5 md:my-0 my-5'>
-                  <a href={Link.link} className='nav-links text-gray-800 text-3xl hover:text-amber-500'>{Link.name}</a>
-                </li>
-              ))
+              links.map((each, key) => <LinkNav key={key} title={each.title} to={each.to} />)
             }
             <button type="button" className="border-black hover:text-amber-500 md:ml-8 md:my-0 my-7 relative flex rounded-full focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-amber-500" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
               <ion-icon name="person-circle-outline" style={{ fontSize: "2.5rem" }}></ion-icon>
