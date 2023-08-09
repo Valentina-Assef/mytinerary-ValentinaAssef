@@ -62,7 +62,7 @@ export default function Carousel() {
           </div>
           <div>
             <div className="my-5 mx-1 py-5 px-2 grid sm:grid-cols-2 gap-4 bg-white rounded-lg">
-              {carouselData.map((each, key) => <Cards key={key} url={each.url} text={each.text} rotate={each.rotate} />)}
+              {carouselData.map((each, key) => <Cards key={key} url={each.url} text={each.text} />)}
             </div>
           </div>
           <div className="flex-none">

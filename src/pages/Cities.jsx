@@ -1,4 +1,4 @@
-import img from "../../public/under-construction1.jpg"
+import img from "../../public/under-construction.jpg"
 
 export default function Cities() {
   return (

@@ -16,6 +16,11 @@
     src: url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap') format('truetype');
 }
 
+.nav-links {
+    font-style: italic;
+    font-family: 'Caveat Brush', cursive;
+}
+
 @layer base {
     .btn-hero::after {
       content: "";
