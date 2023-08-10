@@ -4,51 +4,51 @@ import Cards from "./Cards";
 export default function Carousel() {
   const carouselData = [
     { 
-      url: "../../public/img/london.jfif", 
+      img: "../../public/img/london.jfif", 
       text: "London - England"
     },
     {
-      url: "../../public/img/san-francisco.jpg", 
+      img: "../../public/img/san-francisco.jpg", 
       text: "San Francisco - United States"
     },
     { 
-      url: "../../public/img/rio-janeiro.jpg", 
+      img: "../../public/img/rio-janeiro.jpg", 
       text: "Rio de Janeiro - Brazil"
     },
     {
-      url: "../../public/img/paris.jpg", 
+      img: "../../public/img/paris.jpg", 
       text: "Paris - France"
     },
     { 
-      url: "../../public/img/moscow.jpg", 
+      img: "../../public/img/moscow.jpg", 
       text: "Moscow - Russia"
     },
     { 
-      url: "../../public/img/sydney.jpg", 
+      img: "../../public/img/sydney.jpg", 
       text: "Sydney - Australia"
     },
     { 
-      url: "../../public/img/beijing.jpg", 
+      img: "../../public/img/beijing.jpg", 
       text: "Beijing - China"
     },
     { 
-      url: "../../public/img/santorini.jpg", 
+      img: "../../public/img/santorini.jpg", 
       text: "Santorini - Greece"
     },
     { 
-      url: "../../public/img/dubai.jpg", 
+      img: "../../public/img/dubai.jpg", 
       text: "Dubai - United Arab Emirates"
     },
     { 
-      url: "../../public/img/rome.jpg", 
+      img: "../../public/img/rome.jpg", 
       text: "Rome - Italy"
     },
     { 
-      url: "../../public/img/buenos-aires.jpg", 
+      img: "../../public/img/buenos-aires.jpg", 
       text: "Buenos Aires - Argentina"
     },
     { 
-      url: "../../public/img/tokio.jfif", 
+      img: "../../public/img/tokio.jfif", 
       text: "Tokyo - Japan"
     }
   ]
@@ -105,7 +105,7 @@ export default function Carousel() {
               {sliders[index].map((each, key) => (
               <Cards 
                 key={key} 
-                url={each.url} 
+                img={each.img} 
                 text={each.text}
                 optionalClass={each.optionalClass} />
               ))}
@@ -115,7 +115,7 @@ export default function Carousel() {
             <ion-icon name="caret-forward-outline" onClick={handleNext} style={{ fontSize: "2rem", color: "white" }}></ion-icon>
           </div>
         </div>
-        <div className="flex items-center justify-center mt-4 space-x-2">
+        <div className="flex items-center justify-center mt-2 space-x-2">
           {sliders.map((_, i) => (
             <div
               key={i}
