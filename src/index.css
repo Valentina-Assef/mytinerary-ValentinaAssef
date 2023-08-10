@@ -21,6 +21,12 @@
     font-family: 'Caveat Brush', cursive;
 }
 
+.menu-shadow {
+    box-shadow: inset 0 0 10px rgba(245, 158, 11);
+}
+
+
+
 @layer base {
     .btn-hero::after {
       content: "";
