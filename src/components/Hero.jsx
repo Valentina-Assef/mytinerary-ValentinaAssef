@@ -1,4 +1,4 @@
-import logo from "../../public/logo-mytinerary.png"
+import logo from "/logo-mytinerary.png"
 
 export default function Hero() {
   return (

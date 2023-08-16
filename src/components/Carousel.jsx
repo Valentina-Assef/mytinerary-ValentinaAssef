@@ -4,51 +4,51 @@ import Cards from "./Cards";
 export default function Carousel() {
   const carouselData = [
     { 
-      img: "../../public/img/london.jfif", 
+      img: "/img/london.jfif", 
       text: "London - England"
     },
     {
-      img: "../../public/img/san-francisco.jpg", 
+      img: "/img/san-francisco.jpg", 
       text: "San Francisco - United States"
     },
     { 
-      img: "../../public/img/rio-janeiro.jpg", 
+      img: "/img/rio-janeiro.jpg", 
       text: "Rio de Janeiro - Brazil"
     },
     {
-      img: "../../public/img/paris.jpg", 
+      img: "/img/paris.jpg", 
       text: "Paris - France"
     },
     { 
-      img: "../../public/img/moscow.jpg", 
+      img: "/img/moscow.jpg", 
       text: "Moscow - Russia"
     },
     { 
-      img: "../../public/img/sydney.jpg", 
+      img: "/img/sydney.jpg", 
       text: "Sydney - Australia"
     },
     { 
-      img: "../../public/img/beijing.jpg", 
+      img: "/img/beijing.jpg", 
       text: "Beijing - China"
     },
     { 
-      img: "../../public/img/santorini.jpg", 
+      img: "/img/santorini.jpg", 
       text: "Santorini - Greece"
     },
     { 
-      img: "../../public/img/dubai.jpg", 
+      img: "/img/dubai.jpg", 
       text: "Dubai - United Arab Emirates"
     },
     { 
-      img: "../../public/img/rome.jpg", 
+      img: "/img/rome.jpg", 
       text: "Rome - Italy"
     },
     { 
-      img: "../../public/img/buenos-aires.jpg", 
+      img: "/img/buenos-aires.jpg", 
       text: "Buenos Aires - Argentina"
     },
     { 
-      img: "../../public/img/tokio.jfif", 
+      img: "/img/tokio.jfif", 
       text: "Tokyo - Japan"
     }
   ]

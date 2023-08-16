@@ -1,11 +1,11 @@
 import { useState } from 'react'
-import logo from "../../public/logo-mytinerary.png"
+import logo from "/logo-mytinerary.png"
 import { Link as LinkRouter } from 'react-router-dom'
 
 const Nav = () => {
   let links =[
     {title: "Home", to: "/"},
-    {title: "Cities", to: "Cities"}
+    {title: "Cities", to: "cities"}
   ]
   let [open,setOpen] = useState(false);
   return (
@@ -19,7 +19,7 @@ const Nav = () => {
           </div>
           <ul className={`md:flex md:items-center md:pb-0 pb-3 pr-5 absolute md:static bg-white md:z-auto z-2 left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? "top-20 opacity-100 menu-shadow" : "top-[-490px] md:opacity-100 opacity-0"}`}>
             {
-              links.map((link) => (<LinkRouter className='nav-links text-gray-800 text-3xl hover:text-amber-500 flex md:ml-5 md:my-0 my-7' key={link.key} to={link.to}>{link.title}</LinkRouter>))
+              links.map((link) => (<LinkRouter className='nav-links text-gray-800 text-3xl hover:text-amber-500 flex md:ml-5 md:my-0 my-7' key={link.title} to={link.to}>{link.title}</LinkRouter>))
             }
             <button type="button" className="border-black hover:text-amber-500 md:ml-8 md:my-0 my-7 relative flex rounded-full focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-amber-500" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
               <ion-icon name="person-circle-outline" style={{ fontSize: "2.5rem" }}></ion-icon>
