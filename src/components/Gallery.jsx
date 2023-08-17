@@ -83,7 +83,7 @@ export default function Gallery() {
         return(
           <div className="pics flex justify-center items-end hover:scale-105" key={index}>
             <img src={item.img} />
-            <p className="bg-white p-3 mb-2 nav-links rounded-lg opacity-80 absolute">{item.name} - {item.country}</p>
+            <p className="bg-white p-3 mb-2 font-text rounded-lg opacity-80 absolute">{item.name} - {item.country}</p>
           </div>
         )
       })}

@@ -6,7 +6,7 @@ export default function Cities() {
     <>
       <header className='flex justify-center items-center'>
         <img className='h-56 w-screen object-cover' src={img} alt='Img Header'/>
-        <h2 className="text-white text-7xl p-2 nav-links absolute">Find your perfect trip</h2>
+        <h2 className="text-white text-7xl p-2 font-text absolute">Find your perfect trip</h2>
       </header>
       <section className="m-3"> 
         <form className="flex justify-center items-center" role="search">
