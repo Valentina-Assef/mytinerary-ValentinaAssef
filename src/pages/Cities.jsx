@@ -11,7 +11,9 @@ export default function Cities() {
       <section className="m-3"> 
         <form className="flex justify-center items-center" role="search">
           <input id="searchInput" className="border-2 border-amber-500 rounded mx-2 p-2 focus:border-amber-500 focus:outline-none" type="text" placeholder="Search" aria-label="Search" />
-          <button className="" type="submit"><ion-icon name="search-outline" style={{ fontSize: "2rem", color: "#FFC107" }}></ion-icon></button>
+          <button className="" aria-label="Search" type="submit">
+            <ion-icon name="search-outline" style={{ fontSize: "2rem", color: "#FFC107" }}></ion-icon>
+          </button>
         </form>
       </section>
       <section className="cards-section flex bg-amber-400 p-10">

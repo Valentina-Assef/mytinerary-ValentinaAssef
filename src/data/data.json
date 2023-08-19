@@ -2,76 +2,91 @@
   {
     "img": "/public/img/paris.jpg", 
     "name": "Paris",
-    "country": "France"
+    "country": "France",
+    "user": "64e049cdb4d0e806fc974f0d"
   },
   {
     "img": "/public/img/san-francisco.jpg", 
     "name": "San Francisco",
-    "country": "United States"
+    "country": "United States",
+    "user": "64e049cdb4d0e806fc974f0d"
   },
   { 
     "img": "/public/img/rio-janeiro.jpg", 
     "name": "Rio de Janeiro",
-    "country": "Brazil"
+    "country": "Brazil",
+    "user": "64e049cdb4d0e806fc974f0d"
   },
   {
     "img": "/public/img/barcelona.jpg", 
     "name": "Barcelona",
-    "country": "Spain"
+    "country": "Spain",
+    "user": "64e049cdb4d0e806fc974f0d"
   },
   { 
     "img": "/public/img/dubai.jpg", 
     "name": "Dubai",
-    "country": "United Arab Emirates"
+    "country": "United Arab Emirates",
+    "user": "64e049cdb4d0e806fc974f0d"
   },
   {
     "img": "/public/img/cartagena.jpg", 
     "name": "Cartagena",
-    "country": "Colombia"
+    "country": "Colombia",
+    "user": "64e049cdb4d0e806fc974f0d"
   },
   { 
     "img": "/public/img/moscow.jpg", 
     "name": "Moscow",
-    "country": "Russia"
+    "country": "Russia",
+    "user": "64e049cdb4d0e806fc974f0d"
   },
   { 
     "img": "/public/img/sydney.jpg", 
     "name": "Sydney",
-    "country": "Australia"
+    "country": "Australia",
+    "user": "64e049cdb4d0e806fc974f0d"
   },
   { 
     "img": "/public/img/beijing.jpg", 
     "name": "Beijing",
-    "country": "China"
+    "country": "China",
+    "user": "64e049cdb4d0e806fc974f0d"
   },
   { 
     "img": "/public/img/santorini.jpg", 
     "name": "Santorini",
-    "country": "Greece"
+    "country": "Greece",
+    "user": "64e049cdb4d0e806fc974f0d"
   },
   { 
     "img": "/public/img/rome.jpg", 
     "name": "Rome",
-    "country": "Italy"
+    "country": "Italy",
+    "user": "64e049cdb4d0e806fc974f0d"
   },
   { 
     "img": "/public/img/buenos-aires.jpg", 
     "name": "Buenos Aires",
-    "country": "Argentina"
+    "country": "Argentina",
+    "user": "64e049cdb4d0e806fc974f0d"
   },
   { 
     "img": "/public/img/new-delhi.jpg", 
     "name": "New Delhi",
-    "country": "India"
+    "country": "India",
+    "user": "64e049cdb4d0e806fc974f0d"
   },
   { 
     "img": "/public/img/tokio.jfif", 
     "name": "Tokyo",
-    "country": "Japan"
+    "country": "Japan",
+    "user": "64e049cdb4d0e806fc974f0d"
   },
   { 
     "img": "/public/img/london.jpg", 
     "name": "London",
-    "country": "England"
+    "country": "England",
+    "user": "64e049cdb4d0e806fc974f0d"
   }
 ]
