@@ -25,7 +25,7 @@ export default function Details() {
       </div>
       <div className="mt-5 md:mx-6 lg:mx-32 p-3 flex flex-col justify-center items-center text-4xl bg-amber-300" style={{ boxShadow: "10px 10px 30px rgba(0, 0, 0, 0.8)" }}>
         <p>Itinerary</p>
-        <p>(Under Construction)</p>
+        <p className="text-center">(Under Construction)</p>
       </div>
       <div className="flex justify-center items-center mt-10">
         <button className="bg-gray-900 text-white font-bold rounded-full py-3 px-8">
