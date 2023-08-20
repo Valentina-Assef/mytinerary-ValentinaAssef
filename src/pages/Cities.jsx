@@ -35,7 +35,7 @@ export default function Cities() {
           </button>
         </form>
       </section>
-      <section className="cards-section flex justify-center items-center bg-amber-400 p-10">
+      <section className="cards-section flex justify-center bg-amber-400 p-10">
         <Gallery cities={cities}/>
       </section>
     </>
