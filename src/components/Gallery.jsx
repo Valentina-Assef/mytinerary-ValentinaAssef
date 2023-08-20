@@ -1,15 +1,5 @@
-import axios from "axios"
-import { useState, useEffect } from "react"
-
-export default function Gallery() {
-  let [cities, setCities] = useState()
-
-  useEffect(() => {
-    axios.get("http://localhost:7000/api/cities?name=")
-      .then(response => setCities(response.data.cities))
-      .catch(err => console.log(err))
-  }, [])
-
+export default function Gallery({ cities }) {
+  
   return (
     <div className="gallery">
       {
