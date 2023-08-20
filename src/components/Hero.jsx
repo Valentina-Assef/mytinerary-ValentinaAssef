@@ -1,4 +1,5 @@
 import logo from "/logo-mytinerary.png"
+import { Link as LinkRouter } from 'react-router-dom'
 
 export default function Hero() {
   return (
@@ -10,7 +11,7 @@ export default function Hero() {
         </h2>
         <div className="flex justify-center mt-6">
           <button className="btn-hero bg-amber-500 text-gray-800 font-bold rounded-full py-3 px-8 transition-all duration-300 ease relative overflow-hidden">
-            <a href="/cities" className="relative z-10 transition-all duration-300 ease">View More</a>
+            <LinkRouter to={`/cities`} className="relative z-10 transition-all duration-300 ease">View More</LinkRouter>
           </button>
         </div>
       </div>
