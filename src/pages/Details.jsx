@@ -6,7 +6,16 @@ import ModalDetails from "../components/ModalDetails"
 
 export default function Details() {
   const { _id } = useParams()
-  let [cityDetail, setCityDetail] = useState()
+  const [cityDetail, setCityDetail] = useState()
+  const [modalChange, setModalChange] = useState(false)
+
+  const handleOpenModal = () => {
+    setModalChange(true);
+  };
+
+  const handleCloseModal = () => {
+    setModalChange(false);
+  }
 
   useEffect(() => {
     axios.get(`http://localhost:7000/api/cities/${_id}`)
@@ -59,9 +68,9 @@ export default function Details() {
               </div>
             </div>
             <div className="m-5">
-              <botton className="bg-gray-900 text-white font-bold rounded-full py-3 px-3 md:px-8 cursor-pointer">+ View More</botton>
+              <botton onClick={handleOpenModal} className="bg-gray-900 text-white font-bold rounded-full py-3 px-3 md:px-8 cursor-pointer">+ View More</botton>
+              {modalChange && <ModalDetails onClose={handleCloseModal} />}
             </div>
-            <ModalDetails />
           </div>
         </div>
         <div className="5 m-5 lg:mt-10 p-5 flex flex-col justify-center items-center bg-white rounded-xl" style={{ boxShadow: "10px 10px 20px rgba(0, 0, 0, 0.8)" }}>

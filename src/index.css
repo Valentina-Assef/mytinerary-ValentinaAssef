@@ -98,6 +98,10 @@
     margin-bottom: 12px;
 }
 
+.bg-under-construction {
+    background: url("/public/bg_under-construction.jpg") no-repeat center;
+}
+
 @media (max-width: 991px){
     .gallery {
         -webkit-column-count: 2;
