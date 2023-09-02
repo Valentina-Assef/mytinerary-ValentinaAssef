@@ -1,31 +1,25 @@
-import { useState, useEffect } from "react"
-import axios from "axios"
+import { useEffect } from "react"
 import { useParams } from "react-router-dom"
 import { Link as LinkRouter } from "react-router-dom"
 import ItineraryCard from "../components/ItineraryCard"
+import { useDispatch, useSelector } from "react-redux"
+import { get_detail, get_itineraries } from "../store/actions/detailActions"
 
 export default function Details() {
-  const { _id } = useParams()
-  const [cityDetail, setCityDetail] = useState()
-  const [itineraries, setItineraries] = useState([])
-
+  const _id  = useParams()
+  const dispatch = useDispatch()
+  const cityDetail = useSelector((store) => store.detailReducer.cityDetail)
+  const itineraries = useSelector((store) => store.detailReducer.itineraries)
+  
   //Una ciudad en particular
   useEffect(() => {
-    axios.get(`http://localhost:7000/api/cities/${_id}`)
-      .then(response => {
-        setCityDetail(response.data.oneCity); 
-      })
-      .catch(err => console.log(err))
-  }, [_id])
+    dispatch(get_detail(_id))
+  }, [_id, dispatch])
 
   //Itinerarios de una ciudad
   useEffect(() => {
-    if (cityDetail) {
-        axios.get(`http://localhost:7000/api/itineraries/city/${cityDetail._id}`)
-            .then(response => setItineraries(response.data.itineraries))
-            .catch(err => console.log(err));
-    }
-}, [cityDetail]);
+    dispatch(get_itineraries({ cityDetail: cityDetail }))
+  }, [cityDetail, dispatch]);
 
   if (!cityDetail) {
     return <div>Loading...</div>;

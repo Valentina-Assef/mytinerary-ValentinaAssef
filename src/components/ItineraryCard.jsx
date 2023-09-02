@@ -39,7 +39,7 @@ export default function ItineraryCard({ name, user_name, user_img, price, durati
           ))}
         </div>
         <div className="p-2 flex flex-col justify-center items-center">
-          <botton className="cursor-pointer transition-colors hover:text-red-500"><ion-icon name="heart-outline" style={{ fontSize: "2rem" }}></ion-icon></botton>
+          <button className="cursor-pointer transition-colors hover:text-red-500"><ion-icon name="heart-outline" style={{ fontSize: "2rem" }}></ion-icon></button>
           <p className="text-lg" style={{ marginTop: "-10px" }}>0</p>
         </div>
       </div>
