@@ -31,8 +31,6 @@ export default function Details() {
     return <div>Loading...</div>;
   }
 
-  console.log(itineraries);
-
   return (
     <div className="p-5 md:p-10 bg-amber-500 border-4">
       <div className="p-3 mb-7 md:mb-10 mx-auto md:w-[90vw] text-3xl md:text-5xl bg-amber-300" style={{ boxShadow: "10px 10px 15px rgba(0, 0, 0, 0.8)" }}>
