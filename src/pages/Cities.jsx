@@ -8,12 +8,14 @@ export default function Cities() {
 
   let inputSearch = useRef()
 
+  //Muestra todas los cities
   useEffect(() => {
-    axios.get("http://localhost:7000/api/cities?name=")
+    axios.get("http://localhost:7000/api/cities")
       .then(response => setCities(response.data.cities))
       .catch(err => console.log(err))
   }, [])
 
+  //Search
   const handleSearch = async () => {
     const name = inputSearch.current.value
     try {
