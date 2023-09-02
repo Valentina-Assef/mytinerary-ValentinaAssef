@@ -1,33 +1,25 @@
-import axios from "axios"
 import img from "/header_cities.jpg"
 import Gallery from "../components/Gallery"
-import { useState, useEffect, useRef } from "react"
+import { useEffect, useRef } from "react"
+import { useDispatch, useSelector } from "react-redux"
+import { get_cities, filter_search } from "../store/actions/cityActions"
 
 export default function Cities() {
-  let [cities, setCities] = useState([])
+  const dispatch = useDispatch()
+  const cities = useSelector((store) => store.cityReducer.cities)
 
   let inputSearch = useRef()
 
   //Muestra todas los cities
   useEffect(() => {
-    axios.get("http://localhost:7000/api/cities")
-      .then(response => setCities(response.data.cities))
-      .catch(err => console.log(err))
-  }, [])
+    dispatch(get_cities())   
+  }, [dispatch])
 
   //Search
-  const handleSearch = async () => {
-    const name = inputSearch.current.value
-    try {
-      const response = await axios.get(`http://localhost:7000/api/cities?name=${name}`)
-      setCities(response.data.cities)
-    } catch (error) {
-      if(error.response.status === 404) {
-        setCities([])
-      } else {
-        console.log(error)
-      }
-    }
+  const handleSearch = () => {
+    dispatch(filter_search({
+      name: inputSearch.current.value
+    }))
   }
 
   return (
