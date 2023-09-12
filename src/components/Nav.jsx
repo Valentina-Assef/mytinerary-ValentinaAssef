@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import logo from "/logo-mytinerary.png"
 import { Link as LinkRouter } from 'react-router-dom'
+import UserMenu from './UserMenu'
 
 const Nav = () => {
   let links =[
@@ -8,6 +9,7 @@ const Nav = () => {
     {title: "Cities", to: "cities"}
   ]
   let [open,setOpen] = useState(false);
+  
   return (
     <div className='nav h-20 w-full top-0 left-0 bg-white drop-shadow-lg'>
         <div className='md:flex items-center justify-between py-0 md:px-10 px-7'>
@@ -17,13 +19,11 @@ const Nav = () => {
           <div onClick={() => setOpen(!open)} className='text-3xl absolute right-8 top-6 cursor-pointer md:hidden'>
             <ion-icon name={open ? "close" : "menu"} size="large"></ion-icon>
           </div>
-          <ul className={`md:flex md:items-center md:pb-0 pb-3 pr-5 absolute md:static bg-white md:z-auto z-2 left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? "top-20 opacity-100 menu-shadow" : "top-[-490px] md:opacity-100 opacity-0"}`}>
+          <ul className={`md:flex md:items-center md:pb-0 pr-5 absolute z-50 md:static bg-white left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? "top-20 opacity-100 menu-shadow" : "top-[-490px] md:opacity-100 opacity-0"}`}>
             {
               links.map((link) => (<LinkRouter className='font-text text-gray-800 text-3xl hover:text-amber-500 flex md:ml-5 md:my-0 my-7' key={link.title} to={link.to}>{link.title}</LinkRouter>))
             }
-            <button type="button" className="border-black hover:text-amber-500 md:ml-8 md:my-0 my-7 relative flex rounded-full focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-amber-500" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
-              <ion-icon name="person-circle-outline" style={{ fontSize: "2.5rem" }}></ion-icon>
-            </button>
+            <UserMenu /> 
           </ul>
         </div>
     </div>

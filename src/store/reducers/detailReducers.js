@@ -2,7 +2,7 @@ import { createReducer } from "@reduxjs/toolkit";
 import { get_detail, get_itineraries } from "../actions/detailActions";
 
 const initialState = {
-    cityDetail: {},
+    cityDetail: [],
     itineraries: []
 }
 
