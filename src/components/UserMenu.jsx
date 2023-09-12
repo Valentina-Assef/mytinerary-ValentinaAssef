@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import { useSelector, /* useDispatch  */} from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { Link as LinkRouter } from 'react-router-dom';
-//import { user_logout } from '../store/actions/userActions';
+import { user_logout } from '../store/actions/userActions';
 
 export default function UserMenu() {
   const [openUserMenu, setOpenUserMenu] = useState(false)
@@ -14,18 +14,18 @@ export default function UserMenu() {
         setOpenUserMenu(false);
       }
     }
-    document.addEventListener('click', handleClickOutside);
+    document.addEventListener('click', handleClickOutside)
     return () => {
-      document.removeEventListener('click', handleClickOutside);
-    };
-  }, []);
+      document.removeEventListener('click', handleClickOutside)
+    }
+  }, [])
 
   const closeMenuAndRedirect = (url) => {
-    setOpenUserMenu(false);
-    window.location.href = url;
-  };
+    setOpenUserMenu(false)
+    window.location.href = url
+  }
 
-  /* const dispatch = useDispatch()
+  const dispatch = useDispatch()
 
   const handleSignOut = async (e) => {
     e.preventDefault()
@@ -35,9 +35,9 @@ export default function UserMenu() {
       localStorage.removeItem('token')
       closeMenuAndRedirect('/signin')
     } catch (error) {
-      console.error
+      console.error(error)
     }
-  }; */
+  }
 
   return (
     <>
@@ -57,7 +57,7 @@ export default function UserMenu() {
         </ul>
       )}
       {user && (
-        <button /* onClick={handleSignOut} */ className='flex mb-5 md:mb-0 md:ml-3'>
+        <button onClick={handleSignOut} className='flex mb-5 md:mb-0 md:ml-3'>
           <ion-icon name="log-out-outline" style={{ fontSize: "2rem", color: "#FFC107", position: "relative", zIndex: "-10"}}>Sign Out</ion-icon>
         </button>
       )}
