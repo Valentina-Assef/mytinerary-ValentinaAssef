@@ -33,23 +33,6 @@ export const user_login = createAsyncThunk("user_login", async (obj) => {
   }
 })
 
-/* export const user_logup = createAsyncThunk("user_logup", async (obj) => {
-  try {
-    
-  } catch (error) {
-    console.log(error)
-    Swal.fire({
-      title: 'Error!',
-      text: error.response.data.message,
-      icon: 'error',
-      confirmButtonText: 'Ok'
-    })
-    return {
-      user: null
-    }
-  }
-}) */
-
 export const user_logout = createAsyncThunk("user/logout", async (_, { rejectWithValue }) => {
   try {
     await axios.post("http://localhost:7000/api/auth/signout")

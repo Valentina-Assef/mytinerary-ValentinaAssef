@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link as LinkRouter } from 'react-router-dom';
 import { user_logout } from '../store/actions/userActions';
+import Swal from 'sweetalert2';
 
 export default function UserMenu() {
   const [openUserMenu, setOpenUserMenu] = useState(false)
@@ -30,10 +31,25 @@ export default function UserMenu() {
   const handleSignOut = async (e) => {
     e.preventDefault()
     try {
-      dispatch(user_logout())
-      localStorage.removeItem('user')
-      localStorage.removeItem('token')
-      closeMenuAndRedirect('/signin')
+      const result = await Swal.fire({
+        title: 'Sign Out',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes!'
+      })
+
+      if (result.isConfirmed) {
+        dispatch(user_logout())
+        localStorage.removeItem('user')
+        localStorage.removeItem('token')
+        Swal.fire(
+          'Goodbye'
+        )
+      }
+      
+      //closeMenuAndRedirect('/signin')
     } catch (error) {
       console.error(error)
     }
@@ -58,7 +74,7 @@ export default function UserMenu() {
       )}
       {user && (
         <button onClick={handleSignOut} className='flex mb-5 md:mb-0 md:ml-3'>
-          <ion-icon name="log-out-outline" style={{ fontSize: "2rem", color: "#FFC107", position: "relative", zIndex: "-10"}}>Sign Out</ion-icon>
+          <ion-icon name="log-out-outline" style={{ fontSize: "2rem", color: "#FFC107", position: "relative", zIndex: "-10"}}></ion-icon>
         </button>
       )}
     </>
