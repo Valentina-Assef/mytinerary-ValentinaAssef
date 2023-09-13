@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Link as LinkRouter } from 'react-router-dom'
+import { GoogleSignIn } from "./GoogleSignIn"
 
 export default function FormSignUp() {
   const countries = [
@@ -231,26 +232,27 @@ export default function FormSignUp() {
   }
 
   return (
-      <form action="" method="post" className="mt-14 px-6 lg:px-10 grid grid-cols-6 gap-6">
+    <>
+      <form action="" method="post" className="mt-10 px-6 lg:px-10 grid grid-cols-6 gap-6">
         {/* Name */}
         <div className="col-span-6 sm:col-span-3">
           <label htmlFor="name" className="block text-sm font-medium text-gray-700">First Name</label>
-          <input type="text" id="name" name="name" onChange={handleInput} className="mt-1 p-2 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-md"/>
+          <input type="text" id="name" name="name" onChange={handleInput} className="mt-1 p-1.5 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-md"/>
         </div>
         {/* Last Name */}
         <div className="col-span-6 sm:col-span-3">
           <label htmlFor="lastName" className="block text-sm font-medium text-gray-700">Last Name</label>
-          <input type="text" id="lastName" name="lastName" onChange={handleInput} className="mt-1 p-2 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-md"/>
+          <input type="text" id="lastName" name="lastName" onChange={handleInput} className="mt-1 p-1.5 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-md"/>
         </div>
         {/* Email */}
         <div className="col-span-6 sm:col-span-3">
           <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
-          <input type="email" id="email" name="email" onChange={handleInput} className="mt-1 p-2 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-md"/>
+          <input type="email" id="email" name="email" onChange={handleInput} className="mt-1 p-1.5 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-md"/>
         </div>
         {/* Country Select*/}
         <div className="col-span-6 sm:col-span-3">
           <label htmlFor="country" className="block text-sm font-medium text-gray-700">Country</label>
-          <select name="country" onChange={handleInput} className="mt-1 p-2 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-md">
+          <select name="country" onChange={handleInput} className="mt-1 p-1.5 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-md">
             {countries.map((country) => (
               <option key={country.name} value={country.code}>{country.name}</option>
             ))}
@@ -259,27 +261,33 @@ export default function FormSignUp() {
         {/* Photo */}
         <div className="col-span-6">
           <label htmlFor="photo" className="block text-sm font-medium text-gray-700">Photo URL</label>
-          <input type="text" id="photo" name="photo" onChange={handleInput} className="mt-1 p-2 w-full md:w-3/4 rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-md"/>
+          <input type="text" id="photo" name="photo" onChange={handleInput} className="mt-1 p-1.5 w-full md:w-3/4 rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-md"/>
         </div>
         {/* Password */}
         <div className="col-span-6">
           <label htmlFor="password" className="block text-sm font-medium text-gray-700">Password</label>
-          <input type="password" id="password" name="password" onChange={handleInput} className="mt-1 p-2 w-full md:w-3/4 rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-md"/>
+          <input type="password" id="password" name="password" onChange={handleInput} className="mt-1 p-1.5 w-full md:w-3/4 rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-md"/>
         </div>
         {/* Footer form */}
-        <div className="text-center col-span-6 lg:flex md:items-center lg:gap-4">
-          <div className="">
-            <button type="submit" className="inline-block shrink-0 rounded-md border border-amber-500 bg-amber-500 px-8 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-gray-700 focus:outline-none focus:ring active:text-gray-700">
+        <div className="mt-3 text-center col-span-6 flex flex-wrap lg:flex-nowrap justify-center items-center lg:gap-4">
+          <div>
+            <button type="submit" className="inline-block shrink-0 rounded-md border border-amber-500 bg-amber-500 px-8 py-3 lg:py-4 text-sm font-medium text-white transition hover:bg-transparent hover:text-gray-700 focus:outline-none focus:ring active:text-gray-700">
               Create account
             </button>
           </div>
-          <div className="flex justify-center items-center mt-2 lg:mt-0">
-            <p className="text-sm text-gray-500 px-2">
-              Already have an account? 
-            </p>
-            <LinkRouter to="/signin" className="text-gray-700 underline">Log in</LinkRouter>.
+          <div className="flex items-center mt-5 lg:mt-0 lg:ml-3">
+            <p className="text-md mr-3 md:mx-5">or</p>
+            <GoogleSignIn />
           </div>
         </div>
+        <div className="col-span-6 flex items-center justify-center mt-2 lg:mt-1">
+          <p className="text-sm text-gray-500 px-2">
+            Already have an account? 
+          </p>
+          <LinkRouter to="/signin" className="text-gray-700 underline">Log in</LinkRouter>.
+        </div>
       </form>
+      
+    </>
   )
 }

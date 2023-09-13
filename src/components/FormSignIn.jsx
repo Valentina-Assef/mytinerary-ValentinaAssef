@@ -2,6 +2,7 @@ import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { Link as LinkRouter } from 'react-router-dom'
 import { user_login } from "../store/actions/userActions"
+import { GoogleSignIn } from "./GoogleSignIn"
 
 export default function FormSignIn() {
   const store = useSelector(store => store.userReducer)
@@ -45,16 +46,22 @@ export default function FormSignIn() {
         <input type="password" name="password" onChange={handleInput} placeholder="Enter password" className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-md"/>
       </div>
       {/* Footer */}
-      <div className="flex items-center justify-around py-5">
-        <div className="flex items-center justify-center">
-          <p className="text-sm text-gray-500 px-3">
+      <div className="py-5">
+        <div className="flex flex-wrap lg:flex-nowrap justify-center">
+          <button type="submit" className="inline-block rounded-lg border border-amber-500 bg-amber-500 mx-5 lg:mx-0 px-10 lg:px-5 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-gray-700 focus:outline-none active:text-gray-700">
+            Sign in
+          </button>
+          <div className="flex lg:ml-8 mt-10 lg:mt-0 items-center">
+            <p className="text-md mr-5">or</p>
+            <GoogleSignIn />
+          </div>
+        </div>
+        <div className="flex items-center justify-center mt-10">
+          <p className="text-sm text-gray-500 pr-3">
             No account?
           </p>
           <LinkRouter to="/signup" className="underline">Sign up</LinkRouter>
         </div>
-        <button type="submit" className="inline-block rounded-lg border border-amber-500 bg-amber-500 px-5 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-gray-700 focus:outline-none active:text-gray-700">
-          Sign in
-        </button>
       </div>
     </form>
   )
