@@ -1,6 +1,8 @@
 import { useState } from "react"
 import { Link as LinkRouter } from 'react-router-dom'
 import { GoogleSignIn } from "./GoogleSignIn"
+import axios from "axios"
+import Swal from "sweetalert2"
 
 export default function FormSignUp() {
   const countries = [
@@ -215,6 +217,7 @@ export default function FormSignUp() {
     { code: 'ZW', name: 'Zimbabwe' }
   ]
 
+  //Estado inicial de los input
   const [formData, setFormData] = useState({
     name: "",
     lastName: "",
@@ -224,6 +227,7 @@ export default function FormSignUp() {
     password: ""
   })
 
+  //Obtiene los datos del formulario
   const handleInput = (e) => {
     setFormData({
       ...formData,
@@ -231,9 +235,39 @@ export default function FormSignUp() {
     })
   }
 
+  //Evento submit del formulario
+  const handleSignUp = async (e) => {
+    e.preventDefault();
+  
+    try {
+      const response = await axios.post("http://localhost:7000/api/auth/signup", formData);
+  
+      if (response.status === 201) {
+        Swal.fire({
+          title: 'Success',
+          text: 'User created successfully',
+          icon: 'success',
+          confirmButtonText: 'Ok'
+        })
+        console.log("Registro exitoso");
+      } else {
+        // Registro fallido (manejar el error del servidor)
+        console.error("Error en el registro:", response.data.message);
+      }
+    } catch (error) {
+      Swal.fire({
+        title: 'Error!',
+        text: error.response.data.message,
+        icon: 'error',
+        confirmButtonText: 'Ok'
+      })
+      console.error("Error en la solicitud:", error);
+    }
+  };
+
   return (
     <>
-      <form action="" method="post" className="mt-10 px-6 lg:px-10 grid grid-cols-6 gap-6">
+      <form action="" onSubmit={handleSignUp} className="mt-10 px-6 lg:px-10 grid grid-cols-6 gap-6">
         {/* Name */}
         <div className="col-span-6 sm:col-span-3">
           <label htmlFor="name" className="block text-sm font-medium text-gray-700">First Name</label>
@@ -287,7 +321,6 @@ export default function FormSignUp() {
           <LinkRouter to="/signin" className="text-gray-700 underline">Log in</LinkRouter>.
         </div>
       </form>
-      
     </>
   )
 }
