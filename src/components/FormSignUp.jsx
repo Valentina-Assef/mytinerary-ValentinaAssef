@@ -247,12 +247,16 @@ export default function FormSignUp() {
           title: 'Success',
           text: 'User created successfully',
           icon: 'success',
-          confirmButtonText: 'Ok'
+          confirmButtonText: 'Ok',
         })
-        console.log("Registro exitoso");
+        .then((result) => {
+          if (result.isConfirmed) {
+            console.log("Registro exitoso")
+            window.location.href = '/signin';
+          }
+        })
       } else {
-        // Registro fallido (manejar el error del servidor)
-        console.error("Error en el registro:", response.data.message);
+        console.error("Error en el registro:", response.data.message)
       }
     } catch (error) {
       Swal.fire({

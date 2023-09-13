@@ -48,8 +48,6 @@ export default function UserMenu() {
           'Goodbye'
         )
       }
-      
-      //closeMenuAndRedirect('/signin')
     } catch (error) {
       console.error(error)
     }
