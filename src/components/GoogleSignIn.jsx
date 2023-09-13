@@ -9,6 +9,7 @@ export const GoogleSignIn = () => {
         const data = {
             token_id: response.credential
         }
+        //Que hago con la data?
         const userResponse = await axios.post("http://localhost:7000/api/auth/google", data)
         console.log(userResponse);
     }
