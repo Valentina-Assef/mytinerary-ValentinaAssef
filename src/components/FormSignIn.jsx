@@ -56,7 +56,7 @@ export default function FormSignIn() {
           </button>
           <div className="flex lg:ml-8 mt-10 lg:mt-0 items-center">
             <p className="text-md mr-5">or</p>
-            <GoogleSignIn />
+            <GoogleSignIn onSubmit={handleSignIn}/>
           </div>
         </div>
         <div className="flex items-center justify-center mt-10">
