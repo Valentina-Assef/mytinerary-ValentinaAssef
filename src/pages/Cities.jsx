@@ -25,7 +25,7 @@ export default function Cities() {
   return (
     <>
       <header className='flex justify-center items-center relative -z-10'>
-        <img className='h-56 w-screen object-cover' src={img} alt='Img Header'/>
+        <img className='h-[70vh] w-screen object-cover' src={img} alt='Img Header'/>
         <h2 className="text-white text-7xl p-2 font-text absolute">Find your perfect trip</h2>
       </header>
       <section className="m-3"> 

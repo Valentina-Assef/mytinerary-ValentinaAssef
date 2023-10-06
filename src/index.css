@@ -6,8 +6,19 @@
     @apply py-4 px-4 rounded;
 } */
 
-.img_background {
-    background: url("/background_home.jpg") no-repeat center fixed;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+.img_home {
+    width: 100%;
+    min-height: 90vh;
+    background: url("/bg_home.jpg");
+    //background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
@@ -21,9 +32,13 @@
     font-family: 'Caveat Brush', cursive;
 }
 
+/* Antiguo codigo */
+
 .menu-shadow {
     box-shadow: inset 0 0 10px rgba(245, 158, 11);
 }
+
+/* Hero */
 
 @layer base {
     .btn-hero::after {
@@ -41,9 +56,11 @@
 
     .btn-hero:hover::after{
         transform: scale(200);
-        @apply bg-yellow-400;
+        @apply bg-red-600;
     }
 }
+
+/* Antiguo codigo */
 
 .textoCarousel {
     text-align: center;
@@ -99,7 +116,7 @@
 }
 
 .bg-under-construction {
-    background: url("/public/bg_under-construction.jpg") no-repeat center;
+    background: url("/bg_under-construction.jpg") no-repeat center;
 }
 
 @media (max-width: 991px){

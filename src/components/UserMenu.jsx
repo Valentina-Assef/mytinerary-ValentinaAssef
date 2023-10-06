@@ -55,8 +55,8 @@ export default function UserMenu() {
 
   return (
     <>
-      <button onClick={() => setOpenUserMenu(!openUserMenu)} type="button" id="user-menu-button" className="border-black hover:text-amber-500 md:ml-5 md:my-0 my-5 relative flex rounded-full focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-amber-500" aria-expanded="false" aria-haspopup="true">
-        <img className='h-11 w-11 p-1 cursor-pointer rounded-full' src={user ? user.photo : default_photo} alt='User Icon'/>
+      <button onClick={() => setOpenUserMenu(!openUserMenu)} type="button" id="user-menu-button" className="border-black hover:text-amber-500 md:ml-14 md:my-0 my-5 relative flex rounded-full focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-amber-500" aria-expanded="false" aria-haspopup="true">
+        <img className='h-12 w-12 p-1 cursor-pointer rounded-full' src={user ? user.photo : default_photo} alt='User Icon'/>
       </button>
       {!user && (
         <ul id="user-menu" className={`absolute bg-white p-1 border border-gray-300 rounded-lg shadow-lg text-center ${openUserMenu ? "top-12 md:top-20 right-2 md:right-0 py-3 opacity-100" : "top-[-490px] opacity-0"}`}>
