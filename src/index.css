@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .btn {
-    @apply py-4 px-4 rounded;
-} */
-
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +13,6 @@
     width: 100%;
     min-height: 90vh;
     background: url("/bg_home.jpg");
-    //background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -32,14 +27,7 @@
     font-family: 'Caveat Brush', cursive;
 }
 
-/* Antiguo codigo */
-
-.menu-shadow {
-    box-shadow: inset 0 0 10px rgba(245, 158, 11);
-}
-
 /* Hero */
-
 @layer base {
     .btn-hero::after {
       content: "";
@@ -60,23 +48,22 @@
     }
 }
 
-/* Antiguo codigo */
-
-.textoCarousel {
-    text-align: center;
-    justify-content: center;
-    font-style: italic;
-    font-family: 'Caveat Brush', cursive;
-}
-
+/* Carousel */
 .polaroid {
     display: flex;
     flex-direction: column;
     max-width: 100%;
-    padding:10px 10px 5px 10px;
+    max-height: 240px;
+    padding:20px 15px 40px 15px;
     border:1px solid #BFBFBF;
-    background-color:white;
-    box-shadow:10px 10px 30px rgba(0, 0, 0, 0.8);
+    background-color: white;
+    box-shadow:10px 10px 20px rgba(0, 0, 0, 0.8);
+}
+
+.img-city {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
 }
 
 .RotarIzq {
@@ -93,11 +80,13 @@
     -moz-transform:rotate(-10deg); 
 }
 
-.img-city {
-    width: 100%;
-    height: 100px;
-    object-fit: cover;
+/* Antiguo codigo */
+
+.menu-shadow {
+    box-shadow: inset 0 0 10px rgba(245, 158, 11);
 }
+
+
 
 .gallery {
     -webkit-column-count: 3;
