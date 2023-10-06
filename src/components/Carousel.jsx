@@ -94,7 +94,7 @@ export default function Carousel() {
 
   return (
       <div className="py-5 text-center justify-center cursor-pointer">
-        <h2 className="font-text pb-2 md:text-left md:ml-10 text-4xl">Popular Mytineraries</h2>
+        <h2 className="font-text pb-2 mt-2 md:text-left md:ml-10 text-4xl">Popular Mytineraries</h2>
         <div className="flex items-center justify-center space-x-2 mt-8 mx-2 lg:mx-20">
           <div className="flex-none">
             <ion-icon name="caret-back-outline" onClick={handlePrev} style={{ fontSize: "2rem" }}></ion-icon>
@@ -114,7 +114,7 @@ export default function Carousel() {
             <ion-icon name="caret-forward-outline" onClick={handleNext} style={{ fontSize: "2rem" }}></ion-icon>
           </div>
         </div>
-        <div className="flex items-center justify-center mt-2 space-x-2">
+        <div className="flex items-center justify-center mt-2 mb-8 space-x-2">
           {sliders.map((_, i) => (
             <div
               key={i}
