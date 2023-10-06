@@ -16,9 +16,9 @@ const Nav = () => {
       <div onClick={() => setOpen(!open)} className='text-white text-3xl absolute right-8 top-auto cursor-pointer md:hidden'>
         <ion-icon name={open ? "close" : "menu"} size="large"></ion-icon>
       </div>
-      <ul className={`flex items-center flex-col md:flex-row transition-all duration-500 ease-in ${open ? "top-20 opacity-100" : "top-[-490px] md:opacity-100 opacity-0"}`}>
+      <ul className={`flex md:items-center justify-center md:pt-0 md:pr-5 absolute z-50 md:static bg-white md:bg-transparent rounded right-5 left-5 md:w-auto md:pl-0 transition-all duration-500 ease-in ${open ? "top-20 opacity-100" : "top-[-490px] md:opacity-100 opacity-0"}`}>
         {
-          links.map((link) => (<LinkRouter className='nav-links md:mx-8 text-white text-xl' key={link.title} to={link.to}>{link.title}</LinkRouter>))
+          links.map((link) => (<LinkRouter className='nav-links flex items-center mr-10 md:mx-8 md:text-white text-xl' key={link.title} to={link.to}>{link.title}</LinkRouter>))
         }
         <UserMenu />
       </ul>
