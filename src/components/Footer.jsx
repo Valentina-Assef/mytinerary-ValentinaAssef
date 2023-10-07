@@ -12,7 +12,7 @@ export default function Footer() {
         <h2 className="font-text text-3xl">Follow us</h2>
         {icons.map((icon, index) => (
           <a key={index} href={icon.link} target="_blank" rel="noopener noreferrer">
-            <ion-icon name={icon.icon} size="large" class="hover:text-amber-500"></ion-icon>
+            <ion-icon name={icon.icon} size="large" class="hover:text-red-500"></ion-icon>
           </a>
         ))}
       </div>

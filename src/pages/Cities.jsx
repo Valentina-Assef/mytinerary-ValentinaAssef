@@ -35,13 +35,6 @@ export default function Cities() {
             </button>
           </form>
         </div>
-        
-        {/* <form className="mt-64 absolute flex justify-center items-center" role="search">
-          <input ref={inputSearch} id="searchInput" className="border-2 rounded p-2" type="text" placeholder="Search" aria-label="Search" />
-          <button onClick={handleSearch} aria-label="Search" type="button">
-            <ion-icon name="search-outline" style={{ fontSize: "2rem", color: "#fff", marginLeft: "1rem"}}></ion-icon>
-          </button>
-        </form> */}
       </header>
       <section className="flex justify-center items-center p-8">
         <Gallery cities={cities}/>
@@ -49,12 +42,3 @@ export default function Cities() {
     </>
   )
 }
-
-{/* <section className="m-3"> 
-        <form className="flex justify-center items-center" role="search">
-          <input ref={inputSearch} id="searchInput" className="border-2 border-amber-500 rounded mx-2 p-2 focus:border-amber-500 focus:outline-none" type="text" placeholder="Search" aria-label="Search" />
-          <button onClick={handleSearch} aria-label="Search" type="button">
-            <ion-icon name="search-outline" style={{ fontSize: "2rem", color: "#FFC107", position: "relative", zIndex: "-10"}}></ion-icon>
-          </button>
-        </form>
-      </section> */}

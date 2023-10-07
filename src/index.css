@@ -48,8 +48,7 @@
     }
 }
 
-/* Antiguo codigo */
-
+/* Cities Page */
 .gallery {
     -webkit-column-count: 3;
     -moz-column-count: 3;
@@ -64,10 +63,6 @@
     transition: all 350ms ease;
     cursor: pointer;
     margin-bottom: 12px;
-}
-
-.bg-under-construction {
-    background: url("/bg_under-construction.jpg") no-repeat center;
 }
 
 @media (max-width: 991px){
@@ -89,8 +84,13 @@
     }
 }
 
+/* Version antigua */
+.bg-under-construction {
+    background: url("/bg_under-construction.jpg") no-repeat center;
+}
+
 /* Version 2.0 Carousel */
-.polaroid {
+/* .polaroid {
     display: flex;
     flex-direction: column;
     max-width: 100%;
@@ -109,14 +109,14 @@
 
 .RotarIzq {
     transform:rotate(10deg);
-    -ms-transform:rotate(10deg); /* IE9 */
-    -webkit-transform:rotate(10deg); /* Safari y Chrome */
+    -ms-transform:rotate(10deg); //IE9
+    -webkit-transform:rotate(10deg); //Safari y Chrome
     -moz-transform:rotate(10deg); 
 }
  
 .RotarDer {
     transform:rotate(-10deg);
-    -ms-transform:rotate(-10deg); /* IE9 */
-    -webkit-transform:rotate(-10deg); /* Safari y Chrome */
+    -ms-transform:rotate(-10deg); //IE9
+    -webkit-transform:rotate(-10deg); //Safari y Chrome
     -moz-transform:rotate(-10deg); 
-}
+} */
