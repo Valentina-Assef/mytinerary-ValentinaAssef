@@ -27,6 +27,23 @@
     font-family: 'Caveat Brush', cursive;
 }
 
+/* Navbar */
+.nav-links {
+    position: relative;
+}
+
+.nav-links:hover::after {
+    content: '';
+    background: #fff;
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
 /* Hero */
 @layer base {
     .btn-hero::after {

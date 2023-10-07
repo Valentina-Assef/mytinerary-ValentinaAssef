@@ -8,7 +8,7 @@ export default function Hero() {
       <h2 className="font-text my-5 text-7xl">
         Find your perfect trip 
       </h2>
-      <h3 className="text-xl mb-3">
+      <h3 className="text-xl mb-3 mx-2">
         Designed by insiders who know and love their cities
       </h3>
       <div className="flex justify-center mt-6">
