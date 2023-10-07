@@ -25,7 +25,7 @@ export default function Cities() {
   return (
     <>
       <header className='flex justify-center items-center text-center'>
-        <img className='h-[80vh] w-screen object-cover' src={img} alt='Img Header'/>
+        <img className='h-[70vh] w-screen object-cover' src={img} alt='Img Header'/>
         <h2 className="text-white text-7xl p-2 font-text absolute">Find your perfect trip</h2>
         <div className="search-bar w-[70%] md:w-[50%] lg:w-[25%] mt-64 md:mt-56 rounded-full absolute bg-white py-0.5 pr-0.5 pl-2.5">
           <form role="search" className="flex items-center justify-between pl-5">

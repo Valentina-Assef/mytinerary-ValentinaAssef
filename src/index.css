@@ -90,6 +90,12 @@
     }
 }
 
+@media (max-width: 625px){
+    .nav {
+        background-color: black;
+    }
+}
+
 @media (max-width: 480px){
     .gallery {
         -webkit-column-count: 1;
