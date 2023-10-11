@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import logo from "/logo-mytinerary.png"
 import { Link as LinkRouter } from 'react-router-dom'
 import UserMenu from './UserMenu'
@@ -8,8 +8,26 @@ const Nav = () => {
     {title: "Home", to: "/"},
     {title: "Cities", to: "cities"}
   ]
-   let [open,setOpen] = useState(false);
+  //Menu responsive
+  let [open,setOpen] = useState(false);
   
+  // Controlador de eventos para cerrar el menú en scroll y desplazamiento táctil
+  useEffect(() => {
+    const handleCloseMenu = () => {
+      if (open) {
+        setOpen(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleCloseMenu);
+    window.addEventListener('touchmove', handleCloseMenu);
+
+    return () => {
+      window.removeEventListener('scroll', handleCloseMenu);
+      window.removeEventListener('touchmove', handleCloseMenu);
+    };
+  }, [open]);
+
   return (
     <div className="nav flex items-center justify-between w-full md:px-14 absolute">
       <img src={logo} className='logo w-[200px] mx-8 my-5 cursor-pointer'/>
