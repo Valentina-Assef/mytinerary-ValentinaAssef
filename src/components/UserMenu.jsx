@@ -55,24 +55,24 @@ export default function UserMenu() {
 
   return (
     <>
-      <button onClick={() => setOpenUserMenu(!openUserMenu)} type="button" id="user-menu-button" className="border-black hover:text-amber-500 md:ml-5 md:my-0 my-5 relative flex rounded-full focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-amber-500" aria-expanded="false" aria-haspopup="true">
+      <button onClick={() => setOpenUserMenu(!openUserMenu)} type="button" id="user-menu-button" className="border-black hover:text-red-500 md:ml-5 md:my-0 my-5 relative flex rounded-full focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-red-500" aria-expanded="false" aria-haspopup="true">
         <img className='h-12 w-12 p-1 cursor-pointer rounded-full' src={user ? user.photo : default_photo} alt='User Icon'/>
       </button>
       {!user && (
-        <ul id="user-menu" className={`absolute bg-white p-1 border border-gray-300 rounded-lg shadow-lg text-center ${openUserMenu ? "top-12 md:top-20 right-2 md:right-0 py-3 opacity-100" : "top-[-490px] opacity-0"}`}>
+        <ul id="user-menu" className={`absolute bg-white p-1 border border-gray-300 rounded-lg shadow-lg text-center ${openUserMenu ? "top-20 right-2  py-3 opacity-100" : "top-[-490px] opacity-0"}`}>
           <li className='mx-1'>
             <p className="mb-3">Create an account</p>
-            <LinkRouter onClick={() => closeMenuAndRedirect('/signup')} className="bg-amber-500 font-bold text-white rounded-full py-2 px-3 md:px-10 my-3 md:mx-10" to="/signup">Sign Up</LinkRouter>
+            <LinkRouter onClick={() => closeMenuAndRedirect('/signup')} className="bg-red-500 font-bold text-white rounded-full py-2 px-3 md:px-10 my-3 md:mx-10" to="/signup">Sign Up</LinkRouter>
           </li>
           <li className='mx-1 my-5'>
             <p className="mb-3">Do you have an account?</p>
-            <LinkRouter onClick={() => closeMenuAndRedirect('/signin')} className="border-2 border-amber-500 rounded-full py-2 px-3 md:px-10 my-3 md:mx-10" to="/signin">Sign In</LinkRouter>
+            <LinkRouter onClick={() => closeMenuAndRedirect('/signin')} className="border-2 border-red-500 rounded-full py-2 px-3 md:px-10 my-3 md:mx-10" to="/signin">Sign In</LinkRouter>
           </li>
         </ul>
       )}
       {user && (
-        <button onClick={handleSignOut} className='flex mb-5 md:mb-0 md:ml-3'>
-          <ion-icon name="log-out-outline" style={{ fontSize: "2rem", color: "#FFC107", position: "relative", zIndex: "-10"}}></ion-icon>
+        <button onClick={handleSignOut} className='ml-4 mt-1'>
+          <ion-icon name="log-out-outline" style={{ fontSize: "2.5rem", color: "#fff", position: "relative", zIndex: "-10"}}></ion-icon>
         </button>
       )}
     </>

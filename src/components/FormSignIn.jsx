@@ -40,13 +40,11 @@ export default function FormSignIn() {
       <div>
         <label htmlFor="email" className="sr-only">Email</label>
         <input type="email" name="email" onChange={handleInput} placeholder="Enter email" className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-md"/>  
-        {/* <div className="text-red-500 text-sm mt-1">{errorMessages.email}</div> */}
       </div>
       {/* Password */}
       <div>
         <label htmlFor="password" className="sr-only">Password</label>
         <input type="password" name="password" onChange={handleInput} placeholder="Enter password" className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-md"/>
-        {/* <div className="text-red-500 text-sm mt-1">{errorMessages.password}</div> */}
       </div>
       {/* Footer */}
       <div className="py-5">
