@@ -48,7 +48,7 @@ export default function Carousel() {
       text: "Buenos Aires - Argentina"
     },
     { 
-      img: "/img/tokio.jfif", 
+      img: "/img/tokyo.jpg", 
       text: "Tokyo - Japan"
     }
   ]

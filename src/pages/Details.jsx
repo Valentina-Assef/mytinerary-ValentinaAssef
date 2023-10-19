@@ -26,7 +26,32 @@ export default function Details() {
   }
 
   return (
-    <div className="p-5 md:p-10 bg-amber-500 border-4">
+    <>
+      <div className="flex justify-center">
+        <img src={cityDetail.img} className="w-full max-h-[85vh] object-cover" alt={cityDetail.name} />
+      </div>
+      {itineraries?.map((itinerary, index) => (
+          <ItineraryCard
+            key={index}
+            name={itinerary.name}
+            user_name={itinerary.user.user_name}
+            user_img={itinerary.user.user_img}
+            price={itinerary.price}
+            duration={itinerary.duration}
+            hashtags={itinerary.hashtags}
+          /> 
+        ))}
+      <div className="flex justify-center items-center mt-16">
+        <button className="bg-gray-900 text-white font-bold rounded-full py-3 px-8 mb-5">
+          <LinkRouter to={`/cities`} className="">Go Back</LinkRouter>
+        </button>
+      </div>
+    </>
+      
+  )
+}
+
+/* <div className="p-5 md:p-10 bg-amber-500 border-4">
       <div className="p-3 mb-7 md:mb-10 mx-auto md:w-[90vw] text-3xl md:text-5xl bg-amber-300" style={{ boxShadow: "10px 10px 15px rgba(0, 0, 0, 0.8)" }}>
         <p className="font-text text-center">Itineraries</p>
       </div> 
@@ -52,6 +77,4 @@ export default function Details() {
           <LinkRouter to={`/cities`} className="">Go Back</LinkRouter>
         </button>
       </div>
-    </div>
-  )
-}
+    </div> */

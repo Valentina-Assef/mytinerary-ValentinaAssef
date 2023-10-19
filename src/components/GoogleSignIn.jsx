@@ -12,7 +12,22 @@ export const GoogleSignIn = () => {
         const data = {
             token_id: response.credential //token de Google
         }
-        //Lo que le devuelvo a user
+
+        try {
+            const userResponse = await axios.post("http://localhost:7000/api/auth/google", data);
+      
+            // Almacenar el token de autenticación en Redux o almacenamiento local
+            dispatch(google_login({
+              token: userResponse.data.token,
+              // Otros datos de usuario si es necesario
+            }));
+      
+            console.log(userResponse);
+            
+        } catch (error) {
+            console.error(error);
+        }
+        /* //Lo que le devuelvo a user
         const userResponse = await axios.post("http://localhost:7000/api/auth/google", data)
         console.log(userResponse);
 
@@ -27,7 +42,7 @@ export const GoogleSignIn = () => {
             } catch (error) {
               console.error(error)
             }
-        }
+        } */
     }
 
     //Para manejar window
