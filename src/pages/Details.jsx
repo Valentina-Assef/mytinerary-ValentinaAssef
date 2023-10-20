@@ -33,6 +33,7 @@ export default function Details() {
       {itineraries?.map((itinerary, index) => (
           <ItineraryCard
             key={index}
+            img={itinerary.img}
             name={itinerary.name}
             user_name={itinerary.user.user_name}
             user_img={itinerary.user.user_img}

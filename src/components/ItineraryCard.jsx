@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ModalDetails from "../components/ModalDetails"
 
-export default function ItineraryCard({ image, name, user_name, user_img, price, duration, hashtags }) {
+export default function ItineraryCard({ name, img, user_name, user_img, price, duration, hashtags }) {
   //Modal View More
   const [modalChange, setModalChange] = useState(false)
 
@@ -15,7 +15,7 @@ export default function ItineraryCard({ image, name, user_name, user_img, price,
   
   return (
     <div className="lg:w-3/4 flex flex-wrap md:flex-nowrap justify-center mt-16 mx-5 lg:mx-auto">
-      <img src="/itineraries/rio_1.jpg" alt={name} className="w-48 h-48 rounded-full object-cover"/>
+      <img src={img} alt={name} className="w-48 h-48 rounded-full object-cover"/>
       <div className="md:mx-8">
         <div className="md:absolute flex items-center justify-center md:justify-start">
           <h3 className="text-2xl text-center md:text-start md:text-3xl mb-1">{name}</h3>
