@@ -30,7 +30,7 @@ const Nav = () => {
 
   return (
     <div className="nav flex items-center justify-between w-full md:px-14 absolute">
-      <img src={logo} className='logo w-[200px] mx-8 my-5 cursor-pointer'/>
+      <a href="/"><img src={logo} className='logo w-[200px] mx-8 my-5 cursor-pointer'/></a>
       <div onClick={() => setOpen(!open)} className='text-white text-3xl absolute right-8 top-auto cursor-pointer sm:hidden'>
         <ion-icon name={open ? "close" : "menu"} size="large"></ion-icon>
       </div>
