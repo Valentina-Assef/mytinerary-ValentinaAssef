@@ -30,6 +30,7 @@ export default function Details() {
       <div className="flex justify-center">
         <img src={cityDetail.img} className="w-full max-h-[85vh] object-cover" alt={cityDetail.name} />
       </div>
+      <div className="lg:grid lg:grid-cols-2 lg:items-start xl:grid-cols-3">
       {itineraries?.map((itinerary, index) => (
           <ItineraryCard
             key={index}
@@ -42,6 +43,7 @@ export default function Details() {
             hashtags={itinerary.hashtags}
           /> 
         ))}
+        </div>
       <div className="flex justify-center items-center mt-16">
         <button className="bg-gray-900 text-white font-bold rounded-full py-3 px-8 mb-5">
           <LinkRouter to={`/cities`} className="">Go Back</LinkRouter>
