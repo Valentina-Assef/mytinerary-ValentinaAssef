@@ -1,6 +1,6 @@
-export default function Cards({ img, text, optionalClass }) {
+export default function Cards({ img, text }) {
   return (
-    <div className="popular-card">
+    <div>
       <img src={img} alt={text} className="w-full rounded-lg h-[220px] object-cover" />
       <span className="font-text text-xl">{text}</span>
     </div>
