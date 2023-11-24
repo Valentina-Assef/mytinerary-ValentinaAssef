@@ -34,9 +34,9 @@ export default function FormSignIn() {
   } 
 
   return (
-    <div className="pt-10">
-      <h2 className="text-center text-2xl font-bold sm:text-3xl">Get started today!</h2>
-      <form action="" onSubmit={handleSignIn} className="px-2 lg:px-10 mx-auto my-5 max-w-md space-y-5">
+    <div className="pt-5 md:pt-10">
+      <h2 className="text-center text-2xl font-bold">Get started today!</h2>
+      <form action="" onSubmit={handleSignIn} className="px-2 lg:px-10 mx-auto my-3 max-w-md space-y-3">
         {/* Email */}
         <label htmlFor="email" className="sr-only">Email</label>
         <input type="email" name="email" onChange={handleInput} placeholder="Enter email" className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-md"/>
