@@ -34,7 +34,7 @@ export default function FormSignIn() {
   } 
 
   return (
-    <div className="pt-5 md:pt-10">
+    <div className="py-5 md:pt-10">
       <h2 className="text-center text-2xl font-bold">Get started today!</h2>
       <form action="" onSubmit={handleSignIn} className="px-2 lg:px-10 mx-auto my-3 max-w-md space-y-3">
         {/* Email */}
@@ -45,7 +45,7 @@ export default function FormSignIn() {
         <input type="password" name="password" onChange={handleInput} placeholder="Enter password" className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-md"/>
         {/* Footer */}
         <div className="flex flex-col justify-center items-center">
-          <button type="submit" className="rounded-3xl border-2 border-red-500 bg-red-500 py-3 px-5 text-md font-medium text-white transition hover:bg-transparent hover:text-gray-700 focus:outline-none active:text-gray-700">
+          <button type="submit" className="mt-2 rounded-3xl border-2 border-red-500 bg-red-500 py-3 px-5 text-md font-medium text-white transition hover:bg-transparent hover:text-gray-700 focus:outline-none active:text-gray-700">
             Sign in
           </button>
           <div className="mt-5">
